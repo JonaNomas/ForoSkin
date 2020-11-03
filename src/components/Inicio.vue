@@ -7,11 +7,11 @@
         v-for="item in secciones"
         v-bind:key="item.nombre"
       >
-        <v-toolbar :color="item.color" dark>
-          <v-toolbar-title>{{ item.nombre }}</v-toolbar-title>
-          <v-spacer></v-spacer>
-        </v-toolbar>
         <v-card>
+          <v-toolbar :color="item.color" dark elevation="0">
+            <v-toolbar-title>{{ item.nombre }}</v-toolbar-title>
+            <v-spacer></v-spacer>
+          </v-toolbar>
           <v-card-text v-for="data in item.data" v-bind:key="data.nombre">
             <v-row>
               <v-col cols="12" sm="10">
@@ -28,7 +28,7 @@
                         <v-img width="50px" :src="data.lastPostUserAvatar" />
                       </v-col>
                       <v-col cols="12" sm="8">
-                        <a>{{data.lastPostUserName}}</a>
+                        <a>{{ data.lastPostUserName }}</a>
                       </v-col>
                     </v-row>
                   </v-card-text>
@@ -57,7 +57,8 @@ export default {
             url: "",
             lastPostName: "El Jona",
             lastPostUserName: "El Jona",
-            lastPostUserAvatar: "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
+            lastPostUserAvatar:
+              "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
           },
           {
             nombre: "cosas 2",
@@ -65,7 +66,8 @@ export default {
             url: "",
             lastPostName: "",
             lastPostUserName: "El Jona",
-            lastPostUserAvatar: "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
+            lastPostUserAvatar:
+              "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
           },
         ],
       },
@@ -80,7 +82,8 @@ export default {
             url: "",
             lastPostName: "",
             lastPostUserName: "El Choro Gustavo",
-            lastPostUserAvatar: "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
+            lastPostUserAvatar:
+              "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
           },
           {
             nombre: "cosas 4",
@@ -88,7 +91,8 @@ export default {
             url: "",
             lastPostName: "",
             lastPostUserName: "El Gustavo",
-            lastPostUserAvatar: "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
+            lastPostUserAvatar:
+              "https://fotos.subefotos.com/1871862d87bb8037d953317fb4497189o.png",
           },
         ],
       },
